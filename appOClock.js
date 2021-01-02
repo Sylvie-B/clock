@@ -9,6 +9,7 @@ let ClockConstruct = function (clockW, clockH, unit) {
         clockF.style.height = this.clockH + this.unit;
         clockF.style.backgroundColor = clockBg;
         clockF.id = 'frameClock';
+        clockF.style.position = 'relative';
         document.getElementById(idFrame).appendChild(clockF);
     }
 
@@ -73,15 +74,15 @@ let ClockConstruct = function (clockW, clockH, unit) {
     }
 }
 
-let blackClock = new ClockConstruct(400, 400, 'px');
+let clock1 = new ClockConstruct(400, 400, 'px');
 
-blackClock.frame('black', 'container');
-blackClock.secNeedle(2, 200, 'px', 'blue');
-blackClock.minNeedle(4, 150, 'px', 'red');
-blackClock.hourNeedle(4, 100, 'px', 'white');
+clock1.frame('lightBlue', 'container');
+clock1.secNeedle(2, 200, 'px', 'blue');
+clock1.minNeedle(4, 150, 'px', 'red');
+clock1.hourNeedle(4, 100, 'px', 'black');
 
 let miniClock = new ClockConstruct(100, 100, 'px');
 miniClock.frame('blue', 'container');
 miniClock.hourNeedle(2, 10, 'px', 'white');
-miniClock.minNeedle(2, 20,'px', 'white');
-miniClock.secNeedle(2, 30, 'px', 'white');
+miniClock.minNeedle(2, 20,'px', 'green');
+miniClock.secNeedle(2, 30, 'px', 'black');
